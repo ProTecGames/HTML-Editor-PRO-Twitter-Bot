@@ -1,0 +1,15 @@
+name: Tweet Every Hour
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Runs every hour
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call the Twitter Bot API
+        run: curl -X GET "https://your-vercel-deployment.vercel.app/api/tweet"
+        

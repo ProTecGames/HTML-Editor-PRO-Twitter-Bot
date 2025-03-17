@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/tweet.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/tweet", "dest": "api/tweet.py" }
+  ]
+}
